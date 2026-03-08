@@ -1,8 +1,9 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class ServiceMapper {
 
-    private static HashMap<Integer, String> services = new HashMap<>();
+    private static final Map<Integer, String> services = new HashMap<>();
 
     static {
         services.put(21, "FTP");
@@ -19,6 +20,6 @@ public class ServiceMapper {
     }
 
     public static String getService(int port) {
-        return services.getOrDefault(port, "Unknown Service");
+        return services.getOrDefault(port, "Unknown");
     }
 }
